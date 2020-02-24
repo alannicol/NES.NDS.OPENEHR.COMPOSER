@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  ehrbase_db:
+    container_name: ehrbase-db
+    image: ehrbaseorg/ehrbase-database-docker:11.5
+    ports:
+      - "35432:5432"
+    networks:
+      - "ehrbase-net"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+networks:
+  ehrbase-net:
+    name: ehrbase-net
+

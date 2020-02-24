@@ -1,0 +1,1 @@
+docker-compose -f docker-compose-ehrbase-db.yml up -d
